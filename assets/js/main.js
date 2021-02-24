@@ -9,23 +9,21 @@ const showMenu = (toggleId, navId) => {
         })
     }
 }
-showMenu('nav-toggle', 'nav-menu');
-
+showMenu('nav-toggle', 'nav-menu')
 
 /*===== ACTIVE AND REMOVE MENU =====*/
-const navLink = document.querySelectorAll('.nav_link')
+const navLink = document.querySelectorAll('.nav__link');
 
 function linkAction() {
-    //active link
-    navLink.forEach(n => n.classList.remove('active'))
-    this.classList.add('active')
+    /*Active link*/
+    navLink.forEach(n => n.classList.remove('active'));
+    this.classList.add('active');
 
-    // Remove menu mobile
+    /*Remove menu mobile*/
     const navMenu = document.getElementById('nav-menu')
     navMenu.classList.remove('show')
 }
-
-navLink.forEach(n => n.addEventListener('click', linkAction))
+navLink.forEach(n => n.addEventListener('click', linkAction));
 
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
